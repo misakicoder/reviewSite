@@ -1,7 +1,11 @@
 package com.liyu.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.liyu.dto.LoginFormDTO;
+import com.liyu.dto.Result;
 import com.liyu.entity.User;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * <p>
@@ -13,4 +17,7 @@ import com.liyu.entity.User;
  */
 public interface IUserService extends IService<User> {
 
+    Result sendCode(String phone, HttpSession session);
+
+    Result login(LoginFormDTO loginForm, HttpSession session);
 }
