@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sun.istack.internal.NotNull;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -23,7 +24,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("tb_shop_type")
-public class ShopType implements Serializable {
+public class ShopType implements Serializable,Comparable<ShopType>{
 
     private static final long serialVersionUID = 1L;
 
@@ -61,4 +62,9 @@ public class ShopType implements Serializable {
     private LocalDateTime updateTime;
 
 
+
+    @Override
+    public int compareTo(ShopType o) {
+        return this.sort.compareTo(o.getSort());
+    }
 }

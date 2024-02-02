@@ -1,5 +1,6 @@
 package com.liyu.service;
 
+import com.liyu.dto.Result;
 import com.liyu.entity.Shop;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IShopService extends IService<Shop> {
 
+    Result queryById(Long id);
+
+    Result updateShop(Shop shop);
 }

@@ -1,5 +1,6 @@
 package com.liyu.service;
 
+import com.liyu.dto.Result;
 import com.liyu.entity.ShopType;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IShopTypeService extends IService<ShopType> {
 
+    Result queryTypeList();
 }

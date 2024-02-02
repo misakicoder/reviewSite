@@ -30,9 +30,9 @@ public class VoucherServiceImpl extends ServiceImpl<VoucherMapper, Voucher> impl
     @Override
     public Result queryVoucherOfShop(Long shopId) {
         // 查询优惠券信息
-        List<Voucher> vouchers = getBaseMapper().queryVoucherOfShop(shopId);
+//        List<Voucher> vouchers = getBaseMapper().queryVoucherOfShop(shopId);
         // 返回结果
-        return Result.ok(vouchers);
+        return Result.ok("查询成功");
     }
 
     @Override
